@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentinel", "Sentinel\Sentinel.csproj", "{152376B9-4CED-4671-9CCB-6BD9F06A1E0D}"
 EndProject
@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{5D931689
 		Make-Installer.ps1 = Make-Installer.ps1
 		Sentinel.nuspec = Sentinel.nuspec
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{3E5A7C9D-F168-4356-A5CE-4235D9DB4484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,5 +104,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93081C58-433D-40D1-B0AD-524AA098D3B2} = {3E5A7C9D-F168-4356-A5CE-4235D9DB4484}
+		{336279C2-07D0-4119-B02A-6AEE8ECAF4BC} = {3E5A7C9D-F168-4356-A5CE-4235D9DB4484}
+		{44D1E267-AE99-43BE-B824-980B4ABFF9CA} = {3E5A7C9D-F168-4356-A5CE-4235D9DB4484}
+		{26533F90-3677-4565-84AE-928BCFDC7DFB} = {3E5A7C9D-F168-4356-A5CE-4235D9DB4484}
+		{6E02A1CC-CFC2-48CD-95F5-3C0856AB9FF7} = {3E5A7C9D-F168-4356-A5CE-4235D9DB4484}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D31C5827-70BD-443C-8F5C-31CB8695BAFA}
 	EndGlobalSection
 EndGlobal
