@@ -19,8 +19,10 @@
                     {
                         case "Window":
                             return SystemColors.WindowBrush;
+
                         case "WindowText":
                             return SystemColors.WindowTextBrush;
+
                         default:
                             return null;
                     }

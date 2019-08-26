@@ -13,7 +13,7 @@
         WindowStartupLocation="CenterOwner">
 
     <Window.Resources>
-        
+
         <ObjectDataProvider x:Key="logEntryField"
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
@@ -29,7 +29,7 @@
                 <x:Type TypeName="SentinelInterfaces:MatchMode" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-        
+
         <Style x:Key="ColorSelectorCombobox"
                TargetType="ComboBox">
             <Setter Property="ItemTemplate">
@@ -149,7 +149,6 @@
                           Style="{StaticResource ColorSelectorCombobox}"
                           Visibility="{Binding OverrideForegroundColour, Converter={StaticResource collapsedVisibilityConverter}}"
                           MaxDropDownHeight="200" />
-
             </StackPanel>
 
             <Label Content="Background colour : "
@@ -170,7 +169,6 @@
                           Style="{StaticResource ColorSelectorCombobox}"
                           Visibility="{Binding OverrideBackgroundColour, Converter={StaticResource collapsedVisibilityConverter}}"
                           MaxDropDownHeight="200" />
-
             </StackPanel>
 
             <TextBlock Foreground="Red"

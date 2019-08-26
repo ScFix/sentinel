@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Controls
 {
-    using System;
-
     using Sentinel.Interfaces;
     using Sentinel.Services;
+    using System;
 
     /// <summary>
     /// Interaction logic for PreferencesWindow.xaml

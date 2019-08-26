@@ -43,18 +43,17 @@
                 <GridView AllowsColumnReorder="False">
                     <GridView.Columns>
                         <GridViewColumn Header="Name"
-                                        DisplayMemberBinding="{Binding Path=Settings.Name}" 
-                                        Width="50"/>
+                                        DisplayMemberBinding="{Binding Path=Settings.Name}"
+                                        Width="50" />
                         <GridViewColumn Header="Type"
-                                        DisplayMemberBinding="{Binding Path=Info.Name}" 
-                                        Width="120"/>
+                                        DisplayMemberBinding="{Binding Path=Info.Name}"
+                                        Width="120" />
                         <GridViewColumn Header="Configuration"
-                                        DisplayMemberBinding="{Binding Path=Settings.Summary}" 
-                                        Width="220"/>
+                                        DisplayMemberBinding="{Binding Path=Settings.Summary}"
+                                        Width="220" />
                     </GridView.Columns>
                 </GridView>
             </ListView.View>
-
         </ListView>
 
         <StackPanel Margin="5,0,0,0"

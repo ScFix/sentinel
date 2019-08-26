@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Classification.Gui
 {
-    using System.Windows;
-
     using Interfaces;
     using Services;
+    using System.Windows;
 
     public class RemoveClassifier : IRemoveClassifyingService
     {

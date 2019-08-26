@@ -1,12 +1,10 @@
 namespace Sentinel.MSBuild
 {
-    using System;
-    using System.Collections.Generic;
-
     using Newtonsoft.Json.Linq;
-
     using Sentinel.Interfaces;
     using Sentinel.Interfaces.CodeContracts;
+    using System;
+    using System.Collections.Generic;
 
     internal class LogEntry : ILogEntry
     {
@@ -28,9 +26,11 @@ namespace Sentinel.MSBuild
                 case "ErrorRaised":
                     Type = "ERROR";
                     break;
+
                 case "WarningRaised":
                     Type = "WARN";
                     break;
+
                 default:
                     Type = "INFO";
                     break;

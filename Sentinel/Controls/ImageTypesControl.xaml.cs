@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Controls
 {
-    using System.Windows.Controls;
-
     using Sentinel.Images.Interfaces;
     using Sentinel.Services;
+    using System.Windows.Controls;
 
     /// <summary>
     /// Interaction logic for ImageTypesControl.xaml

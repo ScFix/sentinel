@@ -12,7 +12,7 @@
 
         /// <summary>
         /// Reference back to the provider this setting is appropriate to.
-        /// </summary>       
+        /// </summary>
         [DataMember]
         IProviderInfo Info { get; }
     }

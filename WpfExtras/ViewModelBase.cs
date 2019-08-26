@@ -1,10 +1,9 @@
 ﻿namespace WpfExtras
 {
+    using Common.Logging;
     using System;
     using System.ComponentModel;
     using System.Diagnostics;
-
-    using Common.Logging;
 
     public abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
     {

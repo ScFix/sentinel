@@ -1,13 +1,11 @@
 namespace Sentinel.Logs
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-
     using Sentinel.Classification.Interfaces;
     using Sentinel.Interfaces;
     using Sentinel.Services;
-
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
     using WpfExtras;
 
     public class Log : ViewModelBase, ILogger

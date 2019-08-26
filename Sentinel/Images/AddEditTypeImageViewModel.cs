@@ -1,5 +1,7 @@
 namespace Sentinel.Images
 {
+    using Interfaces;
+    using Microsoft.Win32;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -7,11 +9,6 @@ namespace Sentinel.Images
     using System.Windows;
     using System.Windows.Input;
     using System.Windows.Media.Imaging;
-
-    using Interfaces;
-
-    using Microsoft.Win32;
-
     using WpfExtras;
 
     public class AddEditTypeImageViewModel
@@ -319,10 +316,10 @@ namespace Sentinel.Images
                     var oldTypeError = typeError;
 
                     var options = new ImageOptions
-                                      {
-                                          Quality = (ImageQuality)Enum.Parse(typeof(ImageQuality), Size),
-                                          AcceptLowerQuality = true
-                                      };
+                    {
+                        Quality = (ImageQuality)Enum.Parse(typeof(ImageQuality), Size),
+                        AcceptLowerQuality = true
+                    };
                     if (!string.IsNullOrEmpty(Type) && ImageService?.Get(Type, options) != null)
                     {
                         typeError = TypeError.Duplicate;
@@ -351,16 +348,16 @@ namespace Sentinel.Images
         private void BrowseForImageFiles(object obj)
         {
             var openFileDialog = new OpenFileDialog
-                                     {
-                                         Title = "Select image",
-                                         ValidateNames = true,
-                                         CheckFileExists = true,
-                                         Multiselect = false,
-                                         Filter = "Images files|*.png;*.bmp|All Files|*.*",
-                                         InitialDirectory =
+            {
+                Title = "Select image",
+                ValidateNames = true,
+                CheckFileExists = true,
+                Multiselect = false,
+                Filter = "Images files|*.png;*.bmp|All Files|*.*",
+                InitialDirectory =
                                              Environment.GetFolderPath(
                                                  Environment.SpecialFolder.MyPictures)
-                                     };
+            };
 
             var dialogResult = openFileDialog.ShowDialog(Window);
 

@@ -1,5 +1,7 @@
 ﻿namespace Sentinel.FileMonitor
 {
+    using Microsoft.Win32;
+    using Sentinel.Interfaces.Providers;
     using System;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
@@ -9,11 +11,6 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
-
-    using Microsoft.Win32;
-
-    using Sentinel.Interfaces.Providers;
-
     using WpfExtras;
 
     /// <summary>
@@ -28,11 +25,11 @@
         private string fileName = string.Empty;
 
         private bool loadExisting;
-        
+
         private double refresh;
-        
+
         private bool warnFileNotFound;
-        
+
         private bool isValid;
 
         public FileMonitorProviderPage()
@@ -297,12 +294,12 @@
         {
             // Display the File Open Dialog.
             var dlg = new OpenFileDialog
-                          {
-                              FileName = "logFile",
-                              DefaultExt = ".log",
-                              Multiselect = false,
-                              Filter = "Log files (.log)|*.log|Text documents (.txt)|*.txt|All files|*.*"
-                          };
+            {
+                FileName = "logFile",
+                DefaultExt = ".log",
+                Multiselect = false,
+                Filter = "Log files (.log)|*.log|Text documents (.txt)|*.txt|All files|*.*"
+            };
 
             var result = dlg.ShowDialog();
 

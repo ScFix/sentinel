@@ -1,5 +1,6 @@
 ﻿namespace Sentinel.Views.Heartbeat
 {
+    using Support.Wpf;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -9,7 +10,6 @@
     using System.Windows.Media;
     using System.Windows.Shapes;
     using System.Windows.Threading;
-    using Support.Wpf;
 
     /// <summary>
     ///   Interaction logic for HeartbeatControl.xaml
@@ -24,9 +24,9 @@
             DataContext = this;
 
             DispatcherTimer samplePeriodTimer = new DispatcherTimer(DispatcherPriority.Normal)
-                                                    {
-                                                        Interval = TimeSpan.FromMilliseconds(1000)
-                                                    };
+            {
+                Interval = TimeSpan.FromMilliseconds(1000)
+            };
             samplePeriodTimer.Tick += SampleTick;
             samplePeriodTimer.Start();
         }
@@ -107,28 +107,33 @@
                         new PointCollection(CreatePoints(d.Value, (int)canvas.Width, (int)canvas.Height, scale));
 
                     Polyline pl = new Polyline
-                                      {
-                                          Points = pc,
-                                          StrokeThickness = 3.0d
-                                      };
+                    {
+                        Points = pc,
+                        StrokeThickness = 3.0d
+                    };
 
                     switch (d.Key)
                     {
                         case "DEBUG":
                             pl.Stroke = Brushes.Green;
                             break;
+
                         case "ERROR":
                             pl.Stroke = Brushes.Red;
                             break;
+
                         case "INFO":
                             pl.Stroke = Brushes.Blue;
                             break;
+
                         case "WARN":
                             pl.Stroke = Brushes.Yellow;
                             break;
+
                         case "FATAL":
                             pl.Stroke = Brushes.Purple;
                             break;
+
                         default:
                             pl.Stroke = Brushes.Black;
                             break;

@@ -1,11 +1,10 @@
 ﻿// ReSharper disable once StyleCop.SA1300
 namespace nLog4Tester
 {
+    using NLog;
     using System;
     using System.Collections.Generic;
     using System.Threading;
-
-    using NLog;
 
     public static class Program
     {
@@ -34,7 +33,7 @@ namespace nLog4Tester
             const int SmallestSleep = 1000;
             const int BiggestSleep = 2000;
 
-            for (var i = 0;; i++)
+            for (var i = 0; ; i++)
             {
                 // Randomly generate a message:
                 var text = RandomMessage(i);
@@ -60,18 +59,23 @@ namespace nLog4Tester
                 case 0:
                     Log.Error(text);
                     break;
+
                 case 1:
                     Log.Fatal(text);
                     break;
+
                 case 2:
                     Log.Info(text);
                     break;
+
                 case 3:
                     Log.Warn(text);
                     break;
+
                 case 4:
                     Log.Trace(text);
                     break;
+
                 default:
                     Log.Debug(text);
                     break;
@@ -91,14 +95,19 @@ namespace nLog4Tester
             {
                 case 0:
                     return $"Message {i}";
+
                 case 1:
                     return $"Src:'{RandomSrc()}', Msg:'{RandomReason()} - {i}'";
+
                 case 2:
                     return $"[{RandomSrc()}] {RandomReason()} - {i}";
+
                 case 3:
                     return $"[SimulationTime] {RandomReason()} ({i})";
+
                 case 4:
                     return "UTF-8 test code: \u2019 \u263b \u2660 \u2663 \u2665 \u2666";
+
                 default:
                     return i.ToString();
             }

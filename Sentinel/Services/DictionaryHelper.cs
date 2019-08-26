@@ -1,10 +1,7 @@
 namespace Sentinel.Services
 {
-    using System;
-    using System.Collections.Generic;
-
-    using Sentinel.Interfaces;
     using Sentinel.Interfaces.CodeContracts;
+    using System.Collections.Generic;
 
     public static class DictionaryHelper
     {

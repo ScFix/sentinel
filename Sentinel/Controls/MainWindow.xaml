@@ -42,7 +42,7 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-        
+
         <ObjectDataProvider x:Key="logEntryField"
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
@@ -101,26 +101,26 @@
                         Header="New Session"
                         ImageSource="/Resources/Large/Add.PNG"
                         KeyTip="N"
-                        Command="{Binding NewSession}"/>
+                        Command="{Binding NewSession}" />
 
                     <RibbonApplicationMenuItem
                         Header="Load Session"
                         ImageSource="/Resources/Large/Open.PNG"
                         KeyTip="L"
-                        Command="{Binding LoadSession}"/>
+                        Command="{Binding LoadSession}" />
 
                     <RibbonApplicationMenuItem
                         Header="Save Session"
                         ImageSource="/Resources/Large/Save.PNG"
                         KeyTip="S"
-                        Command="{Binding SaveSession}"/>                    
-                    
+                        Command="{Binding SaveSession}" />
+
                     <RibbonApplicationMenuItem
                         Header="Export Logs"
                         ImageSource="/Resources/Large/Export.PNG"
                         Command="{Binding ExportLogs}"
                         KeyTip="E" />
-                    
+
                     <RibbonApplicationMenuItem
                         Header="Preferences"
                         Command="{Binding ShowPreferences}"
@@ -132,7 +132,7 @@
                         Header="About"
                         ImageSource="/Resources/Large/Info.PNG"
                         KeyTip="A"
-                        Command="{Binding About}"/>
+                        Command="{Binding About}" />
 
                     <RibbonApplicationMenu.FooterPaneContent>
                         <Grid>
@@ -165,13 +165,12 @@
                                                       HorizontalContentAlignment="Left"
                                                       VerticalContentAlignment="Bottom"
                                                   ToolTipTitle="{Binding .}"
-                                                  ToolTipDescription="Click to open this session." />                                        
+                                                  ToolTipDescription="Click to open this session." />
                                     </DataTemplate>
-                                </RibbonGroup.ItemTemplate>                                
-                            </RibbonGroup>                            
+                                </RibbonGroup.ItemTemplate>
+                            </RibbonGroup>
                         </StackPanel>
                     </RibbonApplicationMenu.AuxiliaryPaneContent>
-                    
                 </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
 
@@ -181,12 +180,12 @@
                                     ToolTip="Add a new log viewer"
                                     SmallImageSource="/Resources/Small/Add.png"
                                     Command="{Binding Add}" />
-                    
+
                     <RibbonButton ToolTip="Export the logs currently in the viewer to a file"
                                           Command="{Binding ExportLogs}"
                                           SmallImageSource="/Resources/Small/Export.png"
                                           Label="Export Logs" />
-                    
+
                     <RibbonButton ToolTip="Show the Preferences dialog"
                                           Command="{Binding ShowPreferences}"
                                           CommandParameter="0"
@@ -195,7 +194,7 @@
                 </RibbonGroup>
 
                 <!-- Standard highlighters -->
-                <RibbonGroup Name="StandardHighlightersRibbonGroup" Header="Highlighters"> <!--ItemsSource="{Binding Source={StaticResource standardHighlighters}}"-->                               
+                <RibbonGroup Name="StandardHighlightersRibbonGroup" Header="Highlighters"> <!--ItemsSource="{Binding Source={StaticResource standardHighlighters}}"-->
                     <RibbonGroup.ItemTemplate>
                         <DataTemplate>
                             <RibbonToggleButton Label="{Binding Name}"
@@ -215,7 +214,7 @@
                     </RibbonGroup.ItemTemplate>
                 </RibbonGroup>
                 <RibbonGroup Name="StandardFiltersRibbonGroup" Header="Filters"><!--ItemsSource="{Binding Source={StaticResource standardFilters}}"-->
-                               
+
                     <RibbonGroup.ItemTemplate>
                         <DataTemplate>
                             <RibbonToggleButton Label="{Binding Name}"
@@ -237,27 +236,27 @@
                 <RibbonGroup Header="Search" IsEnabled="True">
                     <StackPanel>
                         <RibbonTextBox Name="SearchRibbonTextBox" TextBoxWidth="200" />
-                        
+
                         <ComboBox Name="SearchTargetComboBox" HorizontalAlignment="Left" Margin="5,0,0,0" MinWidth="100" IsEditable="True" IsReadOnly="True" ItemsSource="{Binding Source={StaticResource logEntryField}}" />
 
                         <StackPanel Orientation="Horizontal">
 
                             <RibbonToggleButton x:Name="HighlightToggleButton" Margin="5,0,0,0" Label="Highlight"
-                                              HorizontalAlignment="Left"                                               
-                                              VerticalContentAlignment="Center" Checked="SearchToggleButtonChecked"/>
+                                              HorizontalAlignment="Left"
+                                              VerticalContentAlignment="Center" Checked="SearchToggleButtonChecked" />
                             <RibbonToggleButton x:Name="FilterToggleButton" Margin="20,0,0,0" Label="Filter"
-                                              HorizontalAlignment="Left"                                              
+                                              HorizontalAlignment="Left"
                                               VerticalContentAlignment="Center" Checked="SearchToggleButtonChecked" />
                             <RibbonToggleButton x:Name="ExtractToggleButton" Margin="20,0,0,0" Label="Extract"
-                                              HorizontalAlignment="Left"                                              
-                                              VerticalContentAlignment="Center" Checked="SearchToggleButtonChecked" />                            
+                                              HorizontalAlignment="Left"
+                                              VerticalContentAlignment="Center" Checked="SearchToggleButtonChecked" />
                         </StackPanel>
                     </StackPanel>
-                    
+
                     <ListBox Name="SearchModeListBox" Margin="2,2,2,0" ItemsSource="{Binding Source={StaticResource matchMode}}" />
                 </RibbonGroup>
                 <RibbonGroup Header="Show Columns">
-                    <RibbonToggleButton Name="ExceptionRibbonToggleButton" Label="Exception"                                          
+                    <RibbonToggleButton Name="ExceptionRibbonToggleButton" Label="Exception"
                                           HorizontalContentAlignment="Center"
                                           VerticalContentAlignment="Bottom"
                                           SmallImageSource="../Resources/Small/Exception.png"
@@ -309,7 +308,7 @@
                                     Command="{Binding ShowPreferences}"
                                     CommandParameter="1" />
                 </RibbonGroup>
-                <RibbonGroup Name="CustomClassifiersRibbonGroupOnTab" Header="Custom Classifiers">                    
+                <RibbonGroup Name="CustomClassifiersRibbonGroupOnTab" Header="Custom Classifiers">
                     <RibbonGroup.ItemTemplate>
                         <DataTemplate>
                             <RibbonToggleButton Label="{Binding Name}"
@@ -343,7 +342,7 @@
                 <RibbonGroup
                     Name="StandardHighlighterRibbonGroupOnTab" Header="Standard Highlighters">
                     <!--ItemsSource="{Binding Source={StaticResource standardHighlighters}}"
-                    Visibility="{Binding Source={StaticResource standardHighlighters}, Path=Count, Converter={StaticResource collapseIfZero}}">-->                    
+                    Visibility="{Binding Source={StaticResource standardHighlighters}, Path=Count, Converter={StaticResource collapseIfZero}}">-->
                     <RibbonGroup.ItemTemplate>
                         <DataTemplate>
                             <RibbonToggleButton
@@ -365,7 +364,7 @@
                 </RibbonGroup>
                 <RibbonGroup Name="CustomHighlighterRibbonGroupOnTab" Header="Custom Highlighters">
                     <!--ItemsSource="{Binding Source={StaticResource customHighlighters}}"
-                    Visibility="{Binding Source={StaticResource customHighlighters}, Path=Count, Converter={StaticResource collapseIfZero}}">-->                    
+                    Visibility="{Binding Source={StaticResource customHighlighters}, Path=Count, Converter={StaticResource collapseIfZero}}">-->
                     <RibbonGroup.ItemTemplate>
                         <DataTemplate>
                             <RibbonToggleButton
@@ -417,7 +416,7 @@
                 <RibbonGroup
                     Name="CustomFiltersRibbonGroupOnTab" Header="Custom Filters">
                     <!--ItemsSource="{Binding Source={StaticResource customFilters}}"
-                        Visibility="{Binding Source={StaticResource customFilters}, Path=Count, Converter={StaticResource collapseIfZero}}"-->                               
+                        Visibility="{Binding Source={StaticResource customFilters}, Path=Count, Converter={StaticResource collapseIfZero}}"-->
                     <RibbonGroup.ItemTemplate>
                         <DataTemplate>
                             <RibbonToggleButton Label="{Binding Name}"
@@ -464,7 +463,7 @@
                         </DataTemplate>
                     </RibbonGroup.ItemTemplate>
                 </RibbonGroup>
-            </RibbonTab>            
+            </RibbonTab>
         </Ribbon>
 
         <DockPanel>

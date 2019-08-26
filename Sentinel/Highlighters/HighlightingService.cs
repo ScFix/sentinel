@@ -1,5 +1,8 @@
 ﻿namespace Sentinel.Highlighters
 {
+    using Gui;
+    using Interfaces;
+    using Sentinel.Interfaces;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Diagnostics;
@@ -7,11 +10,6 @@
     using System.Runtime.Serialization;
     using System.Windows.Input;
     using System.Windows.Media;
-
-    using Gui;
-    using Interfaces;
-    using Sentinel.Interfaces;
-
     using WpfExtras;
 
     [DataContract]

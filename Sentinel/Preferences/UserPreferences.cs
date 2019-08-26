@@ -1,10 +1,10 @@
 ﻿namespace Sentinel.Preferences
 {
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
     using Common.Logging;
     using Interfaces;
     using Support.Wpf;
+    using System.Collections.Generic;
+    using System.Runtime.Serialization;
     using WpfExtras;
 
     /// <summary>

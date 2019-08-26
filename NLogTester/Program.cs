@@ -47,23 +47,29 @@
                 case 0:
                     Log.Error(text);
                     break;
+
                 case 1:
                     Log.Fatal(text);
                     break;
+
                 case 2:
                     Log.Info(text);
                     break;
+
                 case 3:
                     Log.Warn(text);
                     break;
+
                 case 4:
                     Log.Trace(text);
                     break;
+
                 case 5:
                     var embeddedException = new NotSupportedException();
                     var keyNotFoundException = new KeyNotFoundException("Something is embedded", embeddedException);
                     Log.Error(text, keyNotFoundException);
                     break;
+
                 default:
                     Log.Debug(text);
                     break;
@@ -81,14 +87,19 @@
             {
                 case 0:
                     return $"Message {i}";
+
                 case 1:
                     return $"Src:'{RandomSrc()}', Msg:'{RandomReason()} - {i}'";
+
                 case 2:
                     return $"[{RandomSrc()}] {RandomReason()} - {i}";
+
                 case 3:
                     return $"[SimulationTime] {RandomReason()} ({i})";
+
                 case 4:
                     return "UTF-8 test code: \u2019 \u263b \u2660 \u2663 \u2665 \u2666";
+
                 default:
                     return i.ToString();
             }

@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Filters
 {
-    using System.Runtime.Serialization;
-
     using Sentinel.Filters.Interfaces;
     using Sentinel.Interfaces;
+    using System.Runtime.Serialization;
 
     [DataContract]
     public class SearchFilter : Filter, IDefaultInitialisation, ISearchFilter

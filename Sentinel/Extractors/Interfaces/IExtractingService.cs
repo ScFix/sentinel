@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Extractors.Interfaces
 {
+    using Sentinel.Interfaces;
     using System.Collections.ObjectModel;
     using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
 
     public interface IExtractingService<T>
     {

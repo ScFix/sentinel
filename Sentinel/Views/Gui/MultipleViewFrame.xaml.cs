@@ -1,16 +1,14 @@
 ﻿namespace Sentinel.Views.Gui
 {
-    using System;
+    using Sentinel.Interfaces;
+    using Sentinel.Services;
+    using Sentinel.Views.Interfaces;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Services;
-    using Sentinel.Views.Interfaces;
 
     /// <summary>
     /// Interaction logic for MultipleViewFrame.xaml
@@ -21,6 +19,7 @@
 
         // private readonly ISearchHighlighter searchHighlighter;
         private readonly IViewManager viewManager = ServiceLocator.Instance.Get<IViewManager>();
+
         private ILogger log;
         private string primaryTitle;
         private ILogViewer primaryView;

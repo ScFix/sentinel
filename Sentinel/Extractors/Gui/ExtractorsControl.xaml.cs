@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Extractors.Gui
 {
-    using System.Windows.Controls;
-
     using Sentinel.Extractors.Interfaces;
     using Sentinel.Services;
+    using System.Windows.Controls;
 
     /// <summary>
     /// Interaction logic for ExtractorsControl.xaml

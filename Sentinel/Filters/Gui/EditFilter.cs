@@ -1,9 +1,8 @@
 namespace Sentinel.Filters.Gui
 {
+    using Sentinel.Filters.Interfaces;
     using System.Diagnostics;
     using System.Windows;
-
-    using Sentinel.Filters.Interfaces;
 
     public class EditFilter : IEditFilterService
     {

@@ -1,8 +1,7 @@
 namespace Sentinel.Logs.Interfaces
 {
-    using System.Collections.Generic;
-
     using Sentinel.Interfaces;
+    using System.Collections.Generic;
 
     public interface ILogManager : IEnumerable<ILogger>
     {

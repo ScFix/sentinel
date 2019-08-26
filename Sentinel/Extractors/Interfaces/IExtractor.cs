@@ -1,8 +1,7 @@
 ﻿namespace Sentinel.Extractors.Interfaces
 {
-    using System.Runtime.Serialization;
-
     using Sentinel.Interfaces;
+    using System.Runtime.Serialization;
 
     public interface IExtractor
     {

@@ -1,15 +1,13 @@
 ﻿namespace Sentinel.Logs.Gui
 {
+    using Sentinel.Services;
+    using Sentinel.Views.Interfaces;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Diagnostics;
     using System.Linq;
     using System.Windows.Controls;
-
-    using Sentinel.Services;
-    using Sentinel.Views.Interfaces;
-
     using WpfExtras;
 
     /// <summary>
@@ -255,12 +253,15 @@
                 case "Horizontal":
                     Vertical = !Horizontal;
                     break;
+
                 case "Vertical":
                     Horizontal = !Vertical;
                     break;
+
                 case "SingleView":
                     MultipleView = !SingleView;
                     break;
+
                 case "MultipleView":
                     SingleView = !MultipleView;
                     break;

@@ -1,10 +1,8 @@
 namespace Sentinel.Filters.Gui
 {
+    using Sentinel.Interfaces;
     using System.Windows;
     using System.Windows.Input;
-
-    using Sentinel.Interfaces;
-
     using WpfExtras;
 
     public class AddEditFilter : ViewModelBase

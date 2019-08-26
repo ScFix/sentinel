@@ -1,9 +1,8 @@
 namespace Sentinel.Filters.Gui
 {
-    using System.Windows;
-
     using Sentinel.Filters.Interfaces;
     using Sentinel.Services;
+    using System.Windows;
 
     public class AddFilter : IAddFilterService
     {
@@ -30,13 +29,13 @@ namespace Sentinel.Filters.Gui
         private static Filter Construct(AddEditFilter data)
         {
             return new Filter
-                       {
-                           Name = data.Name,
-                           Field = data.Field,
-                           Mode = data.Mode,
-                           Pattern = data.Pattern,
-                           Enabled = true
-                       };
+            {
+                Name = data.Name,
+                Field = data.Field,
+                Mode = data.Mode,
+                Pattern = data.Pattern,
+                Enabled = true
+            };
         }
     }
 }

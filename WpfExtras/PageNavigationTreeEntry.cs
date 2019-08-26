@@ -21,7 +21,6 @@
             page.PropertyChanged += PagePropertyChanged;
             (page.Children as INotifyCollectionChanged).CollectionChanged += PageChildCollectionChanged;
 
-
             foreach (var c in page.Children)
             {
                 children.Add(new PageNavigationTreeEntry(c));
@@ -81,6 +80,7 @@
                     }
 
                     break;
+
                 case NotifyCollectionChangedAction.Remove:
                     var itemsToRemove = Children.Join(e.OldItems.OfType<IWizardPage>(), n => n.Page, p => p, (n, p) => n).ToList();
                     foreach (var c in itemsToRemove)
@@ -89,6 +89,7 @@
                     }
 
                     break;
+
                 case NotifyCollectionChangedAction.Reset:
                     children.Clear();
                     break;

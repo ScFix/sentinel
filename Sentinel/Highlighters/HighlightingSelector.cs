@@ -1,5 +1,10 @@
 namespace Sentinel.Highlighters
 {
+    using Sentinel.Highlighters.Interfaces;
+    using Sentinel.Interfaces;
+    using Sentinel.Interfaces.CodeContracts;
+    using Sentinel.Services;
+    using Sentinel.Support.Wpf;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
@@ -9,11 +14,6 @@ namespace Sentinel.Highlighters
     using System.Windows.Data;
     using System.Windows.Input;
     using System.Windows.Media;
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-    using Sentinel.Services;
-    using Sentinel.Support.Wpf;
 
     /// <summary>
     /// Style selector that provides a implements the highlighters of the QuickHighlighter
@@ -44,15 +44,15 @@ namespace Sentinel.Highlighters
                 var style = new Style(typeof(ListViewItem));
 
                 var trigger = new DataTrigger
-                                  {
-                                      Binding = new Binding
-                                                    {
-                                                        ConverterParameter = highlighter,
-                                                        Converter = new HighlighterConverter(highlighter),
-                                                        Mode = BindingMode.OneWay
-                                                    },
-                                      Value = "Match"
-                                  };
+                {
+                    Binding = new Binding
+                    {
+                        ConverterParameter = highlighter,
+                        Converter = new HighlighterConverter(highlighter),
+                        Mode = BindingMode.OneWay
+                    },
+                    Value = "Match"
+                };
 
                 if (highlighter.Style != null)
                 {
@@ -95,16 +95,16 @@ namespace Sentinel.Highlighters
                             var style = new Style(typeof(ListViewItem));
 
                             var trigger = new DataTrigger
-                                              {
-                                                  Binding =
+                            {
+                                Binding =
                                                       new Binding
-                                                          {
-                                                              ConverterParameter = highlighter,
-                                                              Converter = new HighlighterConverter(highlighter),
-                                                              Mode = BindingMode.OneWay
-                                                          },
-                                                  Value = "Match"
-                                              };
+                                                      {
+                                                          ConverterParameter = highlighter,
+                                                          Converter = new HighlighterConverter(highlighter),
+                                                          Mode = BindingMode.OneWay
+                                                      },
+                                Value = "Match"
+                            };
 
                             if (highlighter.Style != null)
                             {

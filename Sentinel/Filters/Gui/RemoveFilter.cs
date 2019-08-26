@@ -1,9 +1,8 @@
 namespace Sentinel.Filters.Gui
 {
-    using System.Windows;
-
     using Sentinel.Filters.Interfaces;
     using Sentinel.Services;
+    using System.Windows;
 
     public class RemoveFilter : IRemoveFilterService
     {

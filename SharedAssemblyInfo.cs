@@ -10,5 +10,4 @@ using System.Resources;
 
 // Addres CA1014 issues
 [assembly: CLSCompliant(true)]
-
 [assembly: AssemblyCopyright("Copyright © Ray Hayes 2009-2018")]

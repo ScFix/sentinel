@@ -1,9 +1,8 @@
 namespace Sentinel.Highlighters.Interfaces
 {
+    using Sentinel.Interfaces;
     using System.Collections.ObjectModel;
     using System.Windows.Input;
-
-    using Sentinel.Interfaces;
 
     public interface IHighlightingService<T>
         where T : IHighlighter

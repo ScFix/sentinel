@@ -25,10 +25,10 @@
                     VerticalAlignment="Center">
             <Button Command="{Binding Classifier.OrderEarlier}"
                     Margin="5"
-                    Content="Up"/>
+                    Content="Up" />
             <Button Command="{Binding Classifier.OrderLater}"
                     Margin="5"
-                    Content="Down"/>
+                    Content="Down" />
         </StackPanel>
         <ListView Grid.Row="0"
                   SelectedIndex="{Binding Classifier.SelectedIndex, Mode=OneWayToSource}"

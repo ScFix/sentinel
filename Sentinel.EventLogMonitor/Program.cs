@@ -1,15 +1,12 @@
 ﻿namespace Sentinel.EventLogMonitor
 {
+    using CommandLine;
+    using Common.Logging;
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Reflection;
-
-    using CommandLine;
-
-    using Common.Logging;
-
-    using Newtonsoft.Json;
 
     public static class Program
     {
@@ -25,9 +22,9 @@
 
                 // TODO: pass this on the command line
                 var eventLog = new EventLog
-                                   {
-                                       Log = "Application"
-                                   };
+                {
+                    Log = "Application"
+                };
 
                 eventLog.EntryWritten += NewLogEntryWrittenHandler;
                 eventLog.EnableRaisingEvents = true;
@@ -80,7 +77,6 @@
                 }
 
                 Log.Warn("Command line parsing was unsuccessful");
-
             }
             catch (Exception e)
             {
@@ -88,7 +84,6 @@
             }
 
             return null;
-
         }
 
         private static void HandleParseErrors(IEnumerable<Error> errors)

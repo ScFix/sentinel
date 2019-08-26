@@ -1,14 +1,9 @@
 ﻿namespace Sentinel
 {
-    using System;
-    using System.Net.Sockets;
-    using System.Runtime.ExceptionServices;
-    using System.Text;
-    using System.Windows;
-
     using Sentinel.Properties;
     using Sentinel.Services;
     using Sentinel.Services.Interfaces;
+    using System.Windows;
 
     /// <summary>
     /// Interaction logic for MainApplication.xaml

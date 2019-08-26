@@ -28,7 +28,7 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-        <Converters:TypeToSmallImageConverter x:Key="typeToSmallImage"/>
+        <Converters:TypeToSmallImageConverter x:Key="typeToSmallImage" />
         <Converters:ImageLibraryConverter x:Key="ImageLibrary" />
     </UserControl.Resources>
 
@@ -43,7 +43,7 @@
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
                      x:Name="toolBarPanel1">
-           
+
             <Wpf:DataBoundToolbar x:Name="PrimaryToolbar"
                                   ItemsSource="{Binding PrimaryView.ToolbarItems}"
                                   Width="Auto"
@@ -71,7 +71,7 @@
                                                Width="Auto" />
                                 </StackPanel>
                             </CheckBox>
-                            
+
                             <Button x:Name="primaryViewButton"
                                     Visibility="Collapsed"
                                     Style="{DynamicResource {x:Static ToolBar.ButtonStyleKey}}"
@@ -91,7 +91,7 @@
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-                        
+
                         <DataTemplate.Triggers>
                             <DataTrigger Binding="{Binding CanCheck}"
                                          Value="false">
@@ -103,7 +103,6 @@
                                         Value="Collapsed" />
                             </DataTrigger>
                         </DataTemplate.Triggers>
-                        
                     </DataTemplate>
                 </Wpf:DataBoundToolbar.ItemTemplate>
             </Wpf:DataBoundToolbar>
@@ -122,13 +121,12 @@
                           IsEnabled="False"
                           Width="75">
                     <ComboBox.Items>
-                        <ComboBoxItem Content="Type"/>
+                        <ComboBoxItem Content="Type" />
                         <ComboBoxItem Content="System" />
                         <ComboBoxItem Content="Description" />
                     </ComboBox.Items>
-                </ComboBox>                
+                </ComboBox>
             </ToolBar>-->
-            
         </ToolBarTray>
 
         <DockPanel Grid.Row="1">

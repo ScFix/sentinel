@@ -1,14 +1,12 @@
 ﻿namespace Sentinel.Logs.Gui
 {
+    using Sentinel.Providers.Interfaces;
+    using Sentinel.Services;
+    using Sentinel.Views.Interfaces;
     using System.Collections.ObjectModel;
     using System.Collections.Specialized;
     using System.Linq;
     using System.Text;
-
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-    using Sentinel.Views.Interfaces;
-
     using WpfExtras;
 
     public class NewLoggerSettings : ViewModelBase

@@ -1,8 +1,7 @@
 namespace Sentinel.NLog
 {
-    using System;
-
     using Interfaces.Providers;
+    using System;
 
     public class ProviderRegistrationInformation : IProviderRegistrationRecord
     {

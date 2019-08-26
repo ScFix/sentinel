@@ -1,11 +1,10 @@
 namespace Sentinel.Images
 {
-    using System.Diagnostics;
-    using System.Windows;
-
     using Sentinel.Images.Controls;
     using Sentinel.Images.Interfaces;
     using Sentinel.Services;
+    using System.Diagnostics;
+    using System.Windows;
 
     public class EditTypeImageMapping : IEditTypeImage
     {

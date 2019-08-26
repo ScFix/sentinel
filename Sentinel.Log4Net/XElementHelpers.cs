@@ -1,13 +1,10 @@
 namespace Sentinel.Log4Net
 {
+    using Common.Logging;
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Globalization;
     using System.Xml.Linq;
-
-    using Common.Logging;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
 
     public static class XElementHelpers
     {

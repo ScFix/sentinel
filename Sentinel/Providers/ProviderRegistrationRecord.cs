@@ -1,8 +1,7 @@
 ﻿namespace Sentinel.Providers
 {
-    using System;
-
     using Sentinel.Interfaces.Providers;
+    using System;
 
     public class ProviderRegistrationRecord : IProviderRegistrationRecord
     {

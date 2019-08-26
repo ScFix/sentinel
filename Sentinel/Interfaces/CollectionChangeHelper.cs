@@ -1,10 +1,9 @@
 ﻿namespace Sentinel.Interfaces
 {
+    using Common.Logging;
     using System.Collections.Specialized;
     using System.ComponentModel;
     using System.Diagnostics;
-
-    using Common.Logging;
 
     public delegate string GetFriendlyNameDelegate<T>(T obj);
 

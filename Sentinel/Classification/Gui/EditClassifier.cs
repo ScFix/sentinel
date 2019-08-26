@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Classification.Gui
 {
+    using Interfaces;
     using System.Diagnostics;
     using System.Windows;
-
-    using Interfaces;
 
     public class EditClassifier : IEditClassifyingService
     {

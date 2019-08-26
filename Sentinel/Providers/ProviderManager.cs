@@ -1,19 +1,17 @@
 ﻿namespace Sentinel.Providers
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-
     using Sentinel.FileMonitor;
-    using Sentinel.Interfaces;
     using Sentinel.Interfaces.CodeContracts;
     using Sentinel.Interfaces.Providers;
     using Sentinel.Log4Net;
     using Sentinel.MSBuild;
     using Sentinel.NLog;
     using Sentinel.Providers.Interfaces;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.Linq;
 
     public class ProviderManager : IProviderManager
     {

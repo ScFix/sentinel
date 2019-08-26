@@ -152,6 +152,7 @@
                 case "Children":
                     UpdateNavigationPossibilities();
                     break;
+
                 default:
                     break;
             }
@@ -203,13 +204,16 @@
                     case PageChange.First:
                         newPage = first;
                         break;
+
                     case PageChange.Previous:
                         newPage = previous;
                         break;
+
                     case PageChange.Next:
                         SavedData = currentPage.Save(SavedData);
                         newPage = next;
                         break;
+
                     case PageChange.Last:
                         SavedData = currentPage.Save(SavedData);
                         newPage = last;

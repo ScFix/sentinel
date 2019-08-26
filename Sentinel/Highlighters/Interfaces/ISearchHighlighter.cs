@@ -1,8 +1,7 @@
 namespace Sentinel.Highlighters.Interfaces
 {
-    using System.Collections.Generic;
-
     using Sentinel.Interfaces;
+    using System.Collections.Generic;
 
     public interface ISearchHighlighter
     {

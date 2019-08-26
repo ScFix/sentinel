@@ -1,14 +1,13 @@
 namespace Sentinel.Highlighters
 {
+    using Sentinel.Highlighters.Interfaces;
+    using Sentinel.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
     using System.Runtime.Serialization;
     using System.Windows.Media;
-
-    using Sentinel.Highlighters.Interfaces;
-    using Sentinel.Interfaces;
 
     [DataContract]
     public class SearchHighlighter : IDefaultInitialisation, ISearchHighlighter
@@ -85,17 +84,17 @@ namespace Sentinel.Highlighters
         public void Initialise()
         {
             Highlighter = new Highlighter
-                              {
-                                  Name = "Search",
-                                  Style =
+            {
+                Name = "Search",
+                Style =
                                       new HighlighterStyle
-                                          {
-                                              Background = Colors.Lime,
-                                              Foreground = Colors.Fuchsia
-                                          },
-                                  Field = LogEntryField.System,
-                                  Mode = MatchMode.CaseSensitive,
-                              };
+                                      {
+                                          Background = Colors.Lime,
+                                          Foreground = Colors.Fuchsia
+                                      },
+                Field = LogEntryField.System,
+                Mode = MatchMode.CaseSensitive,
+            };
 
             Search = string.Empty;
         }

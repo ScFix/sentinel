@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Classification.Gui
 {
-    using System.Windows.Controls;
-
     using Sentinel.Classification.Interfaces;
     using Sentinel.Services;
+    using System.Windows.Controls;
 
     /// <summary>
     /// Interaction logic for ClassificationsControl.xaml

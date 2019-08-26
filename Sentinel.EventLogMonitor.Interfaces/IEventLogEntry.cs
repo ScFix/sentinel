@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.EventLogMonitor.Interfaces
 {
+    using Newtonsoft.Json;
     using System;
     using System.Diagnostics;
-
-    using Newtonsoft.Json;
 
     public interface IEventLogEntry
     {

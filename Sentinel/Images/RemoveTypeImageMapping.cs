@@ -1,9 +1,8 @@
 namespace Sentinel.Images
 {
-    using System.Windows;
-
     using Sentinel.Images.Interfaces;
     using Sentinel.Services;
+    using System.Windows;
 
     public class RemoveTypeImageMapping : IRemoveTypeImage
     {

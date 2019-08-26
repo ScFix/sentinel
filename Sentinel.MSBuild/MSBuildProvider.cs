@@ -1,5 +1,10 @@
 namespace Sentinel.MSBuild
 {
+    using Common.Logging;
+    using Interfaces;
+    using Interfaces.Providers;
+    using Newtonsoft.Json.Linq;
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -8,15 +13,6 @@ namespace Sentinel.MSBuild
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-
-    using Common.Logging;
-
-    using Interfaces;
-    using Interfaces.Providers;
-
-    using Newtonsoft.Json.Linq;
-
-    using Sentinel.Interfaces.CodeContracts;
 
     public class MsBuildProvider : INetworkProvider
     {
@@ -40,7 +36,7 @@ namespace Sentinel.MSBuild
             Settings = settings as IMsBuildListenerSettings;
             Settings.ThrowIfNull(nameof(Settings));
 
-            ProviderSettings = settings; 
+            ProviderSettings = settings;
         }
 
         public IProviderInfo Information { get; private set; }
@@ -212,7 +208,7 @@ namespace Sentinel.MSBuild
                         var msbuildEventType = property.Name;
                         var content = property.Value as JObject;
 
-                        if ( string.IsNullOrWhiteSpace(msbuildEventType) || content == null)
+                        if (string.IsNullOrWhiteSpace(msbuildEventType) || content == null)
                         {
                             Log.ErrorFormat(
                                 "Expected payload to consist of a property corresponding to the MSBuild event type name, "

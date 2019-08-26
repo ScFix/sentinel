@@ -1,10 +1,9 @@
 namespace Sentinel.Classification.Interfaces
 {
+    using Sentinel.Interfaces;
     using System.Collections.ObjectModel;
     using System.Runtime.Serialization;
     using System.Windows.Input;
-
-    using Sentinel.Interfaces;
 
     public interface IClassifyingService<T>
     {

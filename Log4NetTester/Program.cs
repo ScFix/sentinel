@@ -1,10 +1,9 @@
 ﻿namespace Log4NetTester
 {
+    using log4net;
     using System;
     using System.Collections.Generic;
     using System.Threading;
-
-    using log4net;
 
     public static class Program
     {
@@ -65,15 +64,19 @@
                     var keyNotFoundException = new KeyNotFoundException("Some wrapped message", embeddedException);
                     Log.Error(text, keyNotFoundException);
                     break;
+
                 case 1:
                     Log.Fatal(text);
                     break;
+
                 case 2:
                     Log.Info(text);
                     break;
+
                 case 3:
                     Log.Warn(text);
                     break;
+
                 default:
                     Log.Debug(text);
                     break;
@@ -91,12 +94,16 @@
             {
                 case 0:
                     return $"Message {i}";
+
                 case 1:
                     return $"Src:'{RandomSrc()}', Msg:'{RandomReason()} - {i}'";
+
                 case 2:
                     return $"[{RandomSrc()}] {RandomReason()} - {i}";
+
                 case 3:
                     return $"[SimulationTime] {RandomReason()} ({i})";
+
                 default:
                     return i.ToString();
             }

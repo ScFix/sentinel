@@ -1,10 +1,10 @@
 namespace Sentinel.Support.Converters
 {
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Windows.Data;
-    using Sentinel.Interfaces.CodeContracts;
 
     public class MetaDataParameterConverter : IMultiValueConverter
     {

@@ -1,5 +1,9 @@
 ﻿namespace Sentinel.NLog
 {
+    using Common.Logging;
+    using Interfaces;
+    using Interfaces.Providers;
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -9,13 +13,6 @@
     using System.Threading;
     using System.Threading.Tasks;
     using System.Xml.Linq;
-
-    using Common.Logging;
-
-    using Interfaces;
-    using Interfaces.Providers;
-
-    using Sentinel.Interfaces.CodeContracts;
 
     public class NLogViewerProvider : INetworkProvider
     {
@@ -209,7 +206,7 @@
 
         private LogEntry DecodeEntry(string m)
         {
-            // Record the current date/time 
+            // Record the current date/time
             var receivedTime = DateTime.UtcNow;
 
             XNamespace log4J = "unique";
@@ -271,14 +268,14 @@
             meta["Host"] = host;
 
             var entry = new LogEntry
-                            {
-                                DateTime = date,
-                                System = system,
-                                Thread = record.Attribute("thread")?.Value ?? string.Empty,
-                                Description = description,
-                                Type = type,
-                                MetaData = meta
-                            };
+            {
+                DateTime = date,
+                System = system,
+                Thread = record.Attribute("thread")?.Value ?? string.Empty,
+                Description = description,
+                Type = type,
+                MetaData = meta
+            };
             if (entry.Description.ToUpper().Contains("EXCEPTION"))
             {
                 entry.MetaData.Add("Exception", true);

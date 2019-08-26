@@ -12,7 +12,7 @@
         <Converters:BooleanInvertingValueConverter x:Key="InvertConverter" />
         <Converters:VisibilityToHiddenConverter x:Key="visToHiddenConverter" />
     </UserControl.Resources>
-    
+
     <Grid Margin="3">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

@@ -1,5 +1,8 @@
 ﻿namespace Sentinel.Views.Heartbeat
 {
+    using Sentinel.Interfaces;
+    using Sentinel.Support.Wpf;
+    using Sentinel.Views.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -7,11 +10,6 @@
     using System.Linq;
     using System.Windows.Controls;
     using System.Windows.Threading;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Support.Wpf;
-    using Sentinel.Views.Interfaces;
-
     using WpfExtras;
 
     public class MessageHeatBeat : ViewModelBase, ILogViewer
@@ -44,9 +42,9 @@
             PropertyChanged += PropertyChangedHandler;
 
             var samplePeriodTimer = new DispatcherTimer(DispatcherPriority.Normal)
-                                        {
-                                            Interval = TimeSpan.FromMilliseconds(SamplePeriod)
-                                        };
+            {
+                Interval = TimeSpan.FromMilliseconds(SamplePeriod)
+            };
             samplePeriodTimer.Tick += SampleTick;
             samplePeriodTimer.Start();
         }

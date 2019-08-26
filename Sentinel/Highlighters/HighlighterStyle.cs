@@ -1,12 +1,9 @@
 namespace Sentinel.Highlighters
 {
+    using Newtonsoft.Json;
+    using Sentinel.Interfaces;
     using System.Runtime.Serialization;
     using System.Windows.Media;
-
-    using Newtonsoft.Json;
-
-    using Sentinel.Interfaces;
-
     using WpfExtras;
 
     [DataContract]

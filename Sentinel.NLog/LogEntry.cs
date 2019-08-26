@@ -1,9 +1,8 @@
 namespace Sentinel.NLog
 {
+    using Interfaces;
     using System;
     using System.Collections.Generic;
-
-    using Interfaces;
 
     public class LogEntry : ILogEntry
     {

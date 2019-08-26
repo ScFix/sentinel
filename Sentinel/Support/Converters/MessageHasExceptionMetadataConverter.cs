@@ -1,12 +1,10 @@
 namespace Sentinel.Support.Converters
 {
+    using Common.Logging;
+    using Sentinel.Interfaces;
     using System;
     using System.Globalization;
     using System.Windows.Data;
-
-    using Common.Logging;
-
-    using Sentinel.Interfaces;
 
     public class MessageHasExceptionMetadataConverter : IValueConverter
     {

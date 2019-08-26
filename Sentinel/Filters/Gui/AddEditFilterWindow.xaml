@@ -27,7 +27,6 @@
                 <x:Type TypeName="SentinelInterfaces:MatchMode" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-
     </Window.Resources>
 
     <DockPanel Height="Auto"
@@ -48,7 +47,7 @@
                     Margin="5,5,0,5"
                     IsCancel="True" />
         </StackPanel>
-        
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />

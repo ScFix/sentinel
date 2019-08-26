@@ -16,7 +16,7 @@
     <UserControl.Resources>
         <wpfExtras:BooleanInvertingValueConverter x:Key="BooleanInverterConverter" />
     </UserControl.Resources>
-    
+
     <Grid x:Name="LayoutRoot">
         <TabControl SelectedIndex="{Binding SelectedTabIndex}">
             <TabItem Header="General">
@@ -105,12 +105,12 @@
                                               Margin="0,0,0,5"
                                               ToolTip="Showing the originating thread may not always be useful.  The thread identifier (a number) is unique only to the original application.  This can be misleading when multiple applications are being logged, additionally, a correctly named system will yield a more useful context."
                                               Content="Show the Thread column" />
-                                    <CheckBox IsChecked="{Binding Preferences.ShowSourceColumn}" 
+                                    <CheckBox IsChecked="{Binding Preferences.ShowSourceColumn}"
                                               HorizontalAlignment="Left"
                                               MinWidth="100"
                                               Margin="0,0,0,5"
                                               ToolTip="Show the name of the machine from which the message was sourced"
-                                              Content="Show the message source host-name column"/>
+                                              Content="Show the message source host-name column" />
                                     <CheckBox IsChecked="{Binding Preferences.ShowSourceInformationColumns}"
                                               HorizontalAlignment="Left"
                                               Margin="0,0,0,5"
@@ -125,7 +125,7 @@
                                                   ToolTip="Shows/hides the context column (nLog only)"
                                                   Content="Show the context column" />
                                         <Label Margin="20,0,0,0">Property for context: </Label>
-                                        <TextBox Text="{Binding Preferences.ContextProperty, UpdateSourceTrigger=PropertyChanged}" 
+                                        <TextBox Text="{Binding Preferences.ContextProperty, UpdateSourceTrigger=PropertyChanged}"
                                                  Margin="10,0,0,0"
                                                  Width="200"
                                                  VerticalAlignment="Center" />
@@ -140,8 +140,8 @@
                         <GroupBox Header="Row options">
                             <CheckBox Margin="5"
                                       Content="Use tighter row seperation on Vista / Windows7"
-                                      ToolTip="Vista and Windows 7 put spacing around each row that takes up a fair amount of space, enabling this option tries to reduce the space to something like that used by Windows XP" 
-                                      IsChecked="{Binding Preferences.UseTighterRows}"/>
+                                      ToolTip="Vista and Windows 7 put spacing around each row that takes up a fair amount of space, enabling this option tries to reduce the space to something like that used by Windows XP"
+                                      IsChecked="{Binding Preferences.UseTighterRows}" />
                         </GroupBox>
                         <GroupBox Header="Layout">
                             <CheckBox Margin="5"
@@ -202,7 +202,7 @@
                         <StackPanel Margin="5"
                                     DockPanel.Dock="Top">
                             <TextBlock TextWrapping="WrapWithOverflow">
-                            <Run Text="Filters remove matching log messages from view when enabled." />                            
+                            <Run Text="Filters remove matching log messages from view when enabled." />
                             <Run Text="They do not prevent the messages from being recorded, just from being displayed." />
                             </TextBlock>
                             <TextBlock TextWrapping="WrapWithOverflow"
@@ -221,7 +221,7 @@
                         <StackPanel Margin="5"
                                     DockPanel.Dock="Top">
                             <TextBlock TextWrapping="WrapWithOverflow">
-                            <Run Text="Extractors remove unmatching log messages from view when enabled." />                            
+                            <Run Text="Extractors remove unmatching log messages from view when enabled." />
                             <Run Text="They do not prevent the messages from being recorded, just from being displayed." />
                             </TextBlock>
                             <TextBlock TextWrapping="WrapWithOverflow"
@@ -241,7 +241,7 @@
                                     DockPanel.Dock="Top">
                             <TextBlock TextWrapping="WrapWithOverflow">
                             <Run Text="Images are displayed for log messages by matching types." />
-                            <Run Text="They are displayed for Classifiers, Highlighters, Filters, and Extractors" />                            
+                            <Run Text="They are displayed for Classifiers, Highlighters, Filters, and Extractors" />
                             <Run Text="by matching names." />
                             </TextBlock>
                             <TextBlock TextWrapping="WrapWithOverflow"

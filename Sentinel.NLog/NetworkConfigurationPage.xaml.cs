@@ -1,13 +1,10 @@
 ﻿namespace Sentinel.NLog
 {
-    using System;
+    using Sentinel.Interfaces.Providers;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Diagnostics;
     using System.Windows.Controls;
-
-    using Sentinel.Interfaces.Providers;
-
     using WpfExtras;
 
     /// <summary>
@@ -63,7 +60,7 @@
                 OnPropertyChanged("Port");
             }
         }
-					
+
         public bool IsUdp
         {
             get
@@ -121,12 +118,12 @@
             var previousInfo = (IProviderSettings)saveData;
 
             return new NetworkSettings
-                       {
-                           Name = previousInfo.Name,
-                           Info = previousInfo.Info,
-                           Port = Port,
-                           Protocol = IsUdp ? NetworkProtocol.Udp : NetworkProtocol.Tcp
-                       };
+            {
+                Name = previousInfo.Name,
+                Info = previousInfo.Info,
+                Port = Port,
+                Protocol = IsUdp ? NetworkProtocol.Udp : NetworkProtocol.Tcp
+            };
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

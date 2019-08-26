@@ -1,13 +1,11 @@
 namespace Sentinel.Highlighters
 {
+    using Common.Logging;
+    using Interfaces;
+    using Sentinel.Interfaces;
     using System;
     using System.Globalization;
     using System.Windows.Data;
-
-    using Common.Logging;
-
-    using Interfaces;
-    using Sentinel.Interfaces;
 
     public class HighlighterConverter : IValueConverter
     {

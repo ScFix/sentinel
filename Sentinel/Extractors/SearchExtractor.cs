@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Extractors
 {
-    using System.Runtime.Serialization;
-
     using Sentinel.Extractors.Interfaces;
     using Sentinel.Interfaces;
+    using System.Runtime.Serialization;
 
     [DataContract]
     public class SearchExtractor

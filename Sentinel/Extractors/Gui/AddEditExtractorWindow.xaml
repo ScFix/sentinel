@@ -9,9 +9,9 @@
         WindowStyle="SingleBorderWindow"
         Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
         WindowStartupLocation="CenterOwner">
-    
+
     <Window.Resources>
-        
+
         <ObjectDataProvider x:Key="logEntryField"
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
@@ -19,7 +19,7 @@
                 <x:Type TypeName="SentinelInterfaces:LogEntryField" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-        
+
         <ObjectDataProvider x:Key="matchMode"
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
@@ -27,7 +27,6 @@
                 <x:Type TypeName="SentinelInterfaces:MatchMode" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-        
     </Window.Resources>
 
     <DockPanel Height="Auto"

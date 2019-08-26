@@ -36,7 +36,7 @@
 
         private void PropertyChangedHandler(object sender, PropertyChangedEventArgs e)
         {
-            if ( e.PropertyName == "CustomFormat")
+            if (e.PropertyName == "CustomFormat")
             {
                 IsValid = this["CustomFormat"] == null;
             }
@@ -70,7 +70,7 @@
             }
         }
 
-        #endregion
+        #endregion Implementation of INotifyPropertyChanged
 
         #region Implementation of IWizardPage
 
@@ -120,7 +120,6 @@
             }
         }
 
-
         public void AddChild(IWizardPage newItem)
         {
             children.Add(newItem);
@@ -145,7 +144,7 @@
             //return settings;
         }
 
-        #endregion
+        #endregion Implementation of IWizardPage
 
         #region Implementation of IDataErrorInfo
 
@@ -163,7 +162,7 @@
                 {
                     string err = null;
 
-                    if ( String.IsNullOrEmpty(CustomFormat) )
+                    if (String.IsNullOrEmpty(CustomFormat))
                     {
                         err = "Pattern can not be empty";
                     }
@@ -175,7 +174,7 @@
                             Regex r = new Regex(CustomFormat);
 
                             // See if it contains the minimal fields
-                            if ( !ContainsKeyFields(CustomFormat))
+                            if (!ContainsKeyFields(CustomFormat))
                             {
                                 err = "The pattern does not define any of the core fields, Description, Type or " +
                                       "DateTime.  At least one of these should be defined.";
@@ -228,7 +227,7 @@
             }
         }
 
-        #endregion
+        #endregion Implementation of IDataErrorInfo
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {

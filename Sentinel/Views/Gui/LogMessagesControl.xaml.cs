@@ -1,5 +1,13 @@
 ﻿namespace Sentinel.Views.Gui
 {
+    using Common.Logging;
+    using Highlighters;
+    using Highlighters.Interfaces;
+    using Sentinel.Interfaces;
+    using Sentinel.Interfaces.CodeContracts;
+    using Services;
+    using Support;
+    using Support.Wpf;
     using System;
     using System.ComponentModel;
     using System.Runtime.InteropServices;
@@ -8,19 +16,6 @@
     using System.Windows.Controls;
     using System.Windows.Data;
     using System.Windows.Input;
-
-    using Common.Logging;
-
-    using Highlighters;
-    using Highlighters.Interfaces;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
-    using Services;
-
-    using Support;
-    using Support.Wpf;
 
     /// <summary>
     /// Interaction logic for LogMessagesControl.xaml
@@ -98,12 +93,15 @@
                     case 0:
                         fixedColumn.FixedWidth = 0;
                         break;
+
                     case 1:
                         fixedColumn.FixedWidth = 30;
                         break;
+
                     case 2:
                         fixedColumn.FixedWidth = 60;
                         break;
+
                     case 3:
                         fixedColumn.FixedWidth = 90;
                         break;

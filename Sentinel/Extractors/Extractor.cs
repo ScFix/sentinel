@@ -1,13 +1,10 @@
 ﻿namespace Sentinel.Extractors
 {
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.Runtime.Serialization;
-    using System.Text.RegularExpressions;
-
     using Interfaces;
     using Sentinel.Interfaces;
-
+    using System.Diagnostics;
+    using System.Runtime.Serialization;
+    using System.Text.RegularExpressions;
     using WpfExtras;
 
     [DataContract]
@@ -142,6 +139,7 @@
                     case MatchMode.RegularExpression:
                         modeDescription = "RegEx";
                         break;
+
                     case MatchMode.CaseSensitive:
                         modeDescription = "Substring";
                         break;
@@ -167,27 +165,35 @@
                 case LogEntryField.None:
                     target = string.Empty;
                     break;
+
                 case LogEntryField.Type:
                     target = logEntry.Type;
                     break;
+
                 case LogEntryField.System:
                     target = logEntry.System;
                     break;
+
                 case LogEntryField.Classification:
                     target = string.Empty;
                     break;
+
                 case LogEntryField.Thread:
                     target = logEntry.Thread;
                     break;
+
                 case LogEntryField.Source:
                     target = logEntry.Source;
                     break;
+
                 case LogEntryField.Description:
                     target = logEntry.Description;
                     break;
+
                 case LogEntryField.Host:
                     target = string.Empty;
                     break;
+
                 default:
                     target = string.Empty;
                     break;
@@ -197,19 +203,24 @@
             {
                 case MatchMode.Exact:
                     return !target.Equals(Pattern);
+
                 case MatchMode.CaseSensitive:
                     return !target.Contains(Pattern);
+
                 case MatchMode.CaseInsensitive:
                     return !target.ToUpperInvariant().Contains(Pattern.ToUpperInvariant());
+
                 case MatchMode.RegularExpression:
                     var regex = new Regex(Pattern);
                     return !regex.IsMatch(target);
+
                 default:
                     return false;
             }
         }
 
 #if DEBUG
+
         public override string ToString()
         {
             return Description;

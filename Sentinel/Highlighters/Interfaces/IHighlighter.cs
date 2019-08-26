@@ -1,8 +1,7 @@
 namespace Sentinel.Highlighters.Interfaces
 {
-    using System.Runtime.Serialization;
-
     using Sentinel.Interfaces;
+    using System.Runtime.Serialization;
 
     public interface IHighlighter
     {

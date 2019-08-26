@@ -1,8 +1,7 @@
 ﻿namespace Sentinel.Providers.Interfaces
 {
-    using System.Windows;
-
     using Sentinel.Interfaces.Providers;
+    using System.Windows;
 
     public interface INewProviderWizard
     {

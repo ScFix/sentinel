@@ -1,18 +1,15 @@
 ﻿namespace Sentinel.Providers
 {
+    using Common.Logging;
+    using Sentinel.Interfaces.Providers;
+    using Sentinel.Providers.Interfaces;
+    using Sentinel.Services;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
-
-    using Common.Logging;
-
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-
     using WpfExtras;
 
     /// <summary>

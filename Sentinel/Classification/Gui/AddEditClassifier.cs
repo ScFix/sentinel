@@ -1,10 +1,8 @@
 ﻿namespace Sentinel.Classification.Gui
 {
+    using Sentinel.Interfaces;
     using System.Windows;
     using System.Windows.Input;
-
-    using Sentinel.Interfaces;
-
     using WpfExtras;
 
     public class AddEditClassifier : ViewModelBase

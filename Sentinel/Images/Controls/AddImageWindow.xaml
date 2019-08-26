@@ -13,7 +13,7 @@
     <Window.Resources>
         <conv:VisibilityToHiddenConverter x:Key="visConverter" />
     </Window.Resources>
-    
+
     <DockPanel Height="Auto"
                    Margin="6">
             <StackPanel Orientation="Horizontal"
@@ -37,14 +37,14 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
@@ -53,13 +53,13 @@
                        Margin="5"
                        VerticalAlignment="Center" />
             <TextBox Grid.Row="0"
-                     Grid.Column="1" 
+                     Grid.Column="1"
                      Grid.ColumnSpan="2"
                      Margin="5"
                      VerticalAlignment="Center"
                      IsEnabled="{Binding IsAddMode}"
-                     Text="{Binding Type, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
-            
+                     Text="{Binding Type, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
             <TextBlock Grid.Row="1"
                        Text="Size : "
                        Margin="5"
@@ -76,7 +76,7 @@
                 <ComboBoxItem Content="Medium" />
                 <ComboBoxItem Content="Large" />
             </ComboBox>
-            
+
             <Border Grid.Row="2"
                     Grid.Column="0"
                     Grid.RowSpan="1"
@@ -113,7 +113,7 @@
                     HorizontalAlignment="Center"
                     Width="22"
                     Height="22"
-                    Margin="2,5,0,5"/>
+                    Margin="2,5,0,5" />
             <TextBlock Grid.Row="5"
                        Grid.ColumnSpan="3"
                        Foreground="Red"

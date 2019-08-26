@@ -1,8 +1,7 @@
 namespace Sentinel.NLog
 {
-    using System.Runtime.Serialization;
-
     using Sentinel.Interfaces.Providers;
+    using System.Runtime.Serialization;
 
     public interface INLogAppenderSettings : IProviderSettings
     {

@@ -1,15 +1,13 @@
 namespace Sentinel.Images
 {
+    using Sentinel.Images.Interfaces;
+    using Sentinel.Interfaces;
+    using Sentinel.Interfaces.CodeContracts;
     using System.Collections.ObjectModel;
     using System.Diagnostics;
     using System.Linq;
     using System.Runtime.Serialization;
     using System.Windows.Input;
-
-    using Sentinel.Images.Interfaces;
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
-
     using WpfExtras;
 
     [DataContract]
@@ -124,11 +122,11 @@ namespace Sentinel.Images
                     // Update options
                     // TODO: ideally this should clone
                     var newOptions = new ImageOptions
-                                         {
-                                             Quality = newQuality,
-                                             AcceptLowerQuality = options.AcceptLowerQuality,
-                                             ImageMustExist = options.ImageMustExist
-                                         };
+                    {
+                        Quality = newQuality,
+                        AcceptLowerQuality = options.AcceptLowerQuality,
+                        ImageMustExist = options.ImageMustExist
+                    };
 
                     // Recursive
                     return Get(type, newOptions);

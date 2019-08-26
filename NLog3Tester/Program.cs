@@ -1,10 +1,9 @@
 ﻿namespace NLog3Tester
 {
+    using NLog;
     using System;
     using System.Collections.Generic;
     using System.Threading;
-
-    using NLog;
 
     public static class Program
     {
@@ -14,17 +13,17 @@
 
         private static readonly List<string> Reasons = new List<string>
                                                            {
-                                                               "Starting system", 
-                                                               "Closing system", 
-                                                               "Data exchange started", 
+                                                               "Starting system",
+                                                               "Closing system",
+                                                               "Data exchange started",
                                                                "Unknown issue encountered"
                                                            };
 
         private static readonly List<string> Sources = new List<string>
                                                            {
-                                                               "Foo", 
-                                                               "Bar", 
-                                                               "LongSystemName", 
+                                                               "Foo",
+                                                               "Bar",
+                                                               "LongSystemName",
                                                                "Kernel32"
                                                            };
 
@@ -52,17 +51,28 @@
 
             switch (randomType)
             {
-                case 0: Log.Error(text);
+                case 0:
+                    Log.Error(text);
                     break;
-                case 1: Log.Fatal(text);
+
+                case 1:
+                    Log.Fatal(text);
                     break;
-                case 2: Log.Info(text);
+
+                case 2:
+                    Log.Info(text);
                     break;
-                case 3: Log.Warn(text);
+
+                case 3:
+                    Log.Warn(text);
                     break;
-                case 4: Log.Trace(text);
+
+                case 4:
+                    Log.Trace(text);
                     break;
-                default: Log.Debug(text);
+
+                default:
+                    Log.Debug(text);
                     break;
             }
         }
@@ -78,14 +88,19 @@
             {
                 case 0:
                     return $"Message {i}";
+
                 case 1:
                     return $"Src:'{RandomSrc()}', Msg:'{RandomReason()} - {i}'";
+
                 case 2:
                     return $"[{RandomSrc()}] {RandomReason()} - {i}";
+
                 case 3:
                     return $"[SimulationTime] {RandomReason()} ({i})";
+
                 case 4:
                     return "UTF-8 test code: \u2019 \u263b \u2660 \u2663 \u2665 \u2666";
+
                 default:
                     return i.ToString();
             }

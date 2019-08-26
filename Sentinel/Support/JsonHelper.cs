@@ -1,20 +1,18 @@
 namespace Sentinel.Support
 {
+    using Common.Logging;
+    using Newtonsoft.Json;
     using System;
     using System.IO;
-
-    using Common.Logging;
-
-    using Newtonsoft.Json;
 
     public static class JsonHelper
     {
         private static readonly ILog Log = LogManager.GetLogger(nameof(JsonHelper));
 
         private static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-                                                                      {
-                                                                          TypeNameHandling = TypeNameHandling.All
-                                                                      };
+        {
+            TypeNameHandling = TypeNameHandling.All
+        };
 
         public static void SerializeToFile<T>(T objectToSerialize, string filename)
         {

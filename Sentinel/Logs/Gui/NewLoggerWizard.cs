@@ -17,12 +17,12 @@
         public bool Display(Window parent)
         {
             var wizard = new Wizard
-                             {
-                                 Owner = parent,
-                                 ShowNavigationTree = false,
-                                 Title = "Sentinel - Add new logger",
-                                 SavedData = Settings
-                             };
+            {
+                Owner = parent,
+                ShowNavigationTree = false,
+                Title = "Sentinel - Add new logger",
+                SavedData = Settings
+            };
 
             wizard.AddPage(new AddNewLoggerWelcomePage());
             wizard.AddPage(new SetLoggerNamePage());

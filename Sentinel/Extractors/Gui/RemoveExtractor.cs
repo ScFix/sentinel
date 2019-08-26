@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Extractors.Gui
 {
-    using System.Windows;
-
     using Sentinel.Extractors.Interfaces;
     using Sentinel.Services;
+    using System.Windows;
 
     public class RemoveExtractor
         : IRemoveExtractorService

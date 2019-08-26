@@ -7,7 +7,7 @@
     <UserControl.Resources>
         <wpfConverters:ColourConverter x:Key="ColorConverter" />
     </UserControl.Resources>
-    
+
     <DockPanel>
         <StackPanel DockPanel.Dock="Left"
                     VerticalAlignment="Center">
@@ -80,6 +80,3 @@
         </ListView>
     </DockPanel>
 </UserControl>
-
-
-

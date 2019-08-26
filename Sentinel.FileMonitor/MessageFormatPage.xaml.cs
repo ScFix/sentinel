@@ -149,7 +149,7 @@
 
             IFileMonitoringProviderSettings settings = saveData as IFileMonitoringProviderSettings;
 
-            if ( settings != null )
+            if (settings != null)
             {
                 if (!IsCustom)
                 {
@@ -170,10 +170,11 @@
 
         private string GetDecoder()
         {
-            switch ( SelectedDecoderIndex )
+            switch (SelectedDecoderIndex)
             {
                 case 0:
                     return "^(?<DateTime>[^|]+)\\|(?<Type>[^|]+)\\|(?<Logger>[^|]+)\\|(?<Description>[^$]*)$";
+
                 default:
                     throw new NotSupportedException("Custom message formats are not handled on this page.");
             }

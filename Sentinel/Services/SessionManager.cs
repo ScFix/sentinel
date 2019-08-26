@@ -1,16 +1,6 @@
 ﻿namespace Sentinel.Services
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-    using System.Windows;
-
     using Newtonsoft.Json.Linq;
-
     using Sentinel.Classification;
     using Sentinel.Classification.Interfaces;
     using Sentinel.Extractors;
@@ -38,7 +28,14 @@
     using Sentinel.Views;
     using Sentinel.Views.Gui;
     using Sentinel.Views.Interfaces;
-
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Linq;
+    using System.Runtime.Serialization;
+    using System.Text;
+    using System.Windows;
     using WpfExtras;
 
     [DataContract]
@@ -292,19 +289,19 @@
                             {
                                 var thisSetting = JsonHelper.DeserializeFromString<NetworkSettings>(providerSetting.ToString());
                                 pendingProviderRecords.Add(new PendingProviderRecord
-                                                               {
-                                                                   Info = thisSetting.Info,
-                                                                   Settings = thisSetting
-                                                               });
+                                {
+                                    Info = thisSetting.Info,
+                                    Settings = thisSetting
+                                });
                             }
                             else if (providerSetting["$type"].ToString().Contains(typeof(UdpAppenderSettings).Name))
                             {
                                 var thisSetting = JsonHelper.DeserializeFromString<UdpAppenderSettings>(providerSetting.ToString());
                                 pendingProviderRecords.Add(new PendingProviderRecord
-                                                               {
-                                                                   Info = thisSetting.Info,
-                                                                   Settings = thisSetting
-                                                               });
+                                {
+                                    Info = thisSetting.Info,
+                                    Settings = thisSetting
+                                });
                             }
                         }
                     }

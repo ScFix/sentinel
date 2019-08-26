@@ -47,9 +47,9 @@
                  Grid.Column="1"
                  Style="{StaticResource textBoxInError}"
                  VerticalAlignment="Center"
-                 Text="{Binding Path=LogName, 
-                                ValidatesOnDataErrors=True, 
-                                Mode=TwoWay, 
+                 Text="{Binding Path=LogName,
+                                ValidatesOnDataErrors=True,
+                                Mode=TwoWay,
                                 UpdateSourceTrigger=PropertyChanged}" />
     </Grid>
 </UserControl>

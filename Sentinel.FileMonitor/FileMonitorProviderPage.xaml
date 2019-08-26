@@ -23,9 +23,9 @@
     </UserControl.Resources>
     <Grid Grid.IsSharedSizeScope="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -68,7 +68,6 @@
                         Width="75"
                         Height="23"
                         Margin="3" />
-
             </Grid>
         </GroupBox>
 
@@ -77,7 +76,7 @@
                   Grid.Row="1"
                   Grid.Column="0"
                   Grid.ColumnSpan="3">
-            <Grid >
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
@@ -95,8 +94,8 @@
                 <Slider Value="{Binding Refresh, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                         Minimum="{Binding MinRefresh}"
                         Maximum="{Binding MaxRefresh}"
-                        Grid.Column="1" 
-                        Margin="3"/>
+                        Grid.Column="1"
+                        Margin="3" />
                 <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Center">
                     <TextBlock Text="{Binding Refresh, StringFormat=0}"
                                Margin="10,0,10,0"

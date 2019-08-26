@@ -1,9 +1,8 @@
 namespace Sentinel.FileMonitor
 {
+    using Sentinel.Interfaces;
     using System;
     using System.Collections.Generic;
-
-    using Sentinel.Interfaces;
 
     internal class LogEntry : ILogEntry
     {

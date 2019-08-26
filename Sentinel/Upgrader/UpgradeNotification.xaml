@@ -17,18 +17,17 @@
         <converters1:CollapseIfNullConverter x:Key="collapseIfNullConverter" />
     </UserControl.Resources>
 
-          
     <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
           Visibility="{Binding Converter={StaticResource boolCollapseConverter}, Path=ShowPanel}">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="*"/>
-            <ColumnDefinition  Width="Auto"/>
+            <ColumnDefinition  Width="*" />
+            <ColumnDefinition  Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <Grid Grid.RowSpan="2"

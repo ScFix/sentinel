@@ -1,10 +1,8 @@
 namespace Sentinel.Services
 {
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Linq;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
 
     public static class AttributeHelper
     {

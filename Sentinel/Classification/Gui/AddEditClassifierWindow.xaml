@@ -27,7 +27,6 @@
                 <x:Type TypeName="i:MatchMode" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-
     </Window.Resources>
 
     <DockPanel Height="Auto"

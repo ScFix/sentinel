@@ -1,8 +1,7 @@
 namespace Sentinel.NLog
 {
-    using System;
-
     using Sentinel.Interfaces.Providers;
+    using System;
 
     internal class ProviderInfo : IProviderInfo
     {

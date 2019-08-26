@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Extractors.Gui
 {
-    using System.Windows;
-
     using Sentinel.Extractors.Interfaces;
     using Sentinel.Services;
+    using System.Windows;
 
     public class AddExtractor : IAddExtractorService
     {
@@ -35,13 +34,13 @@
         private static Extractor Construct(AddEditExtractor data)
         {
             return new Extractor
-                       {
-                           Name = data.Name,
-                           Field = data.Field,
-                           Mode = data.Mode,
-                           Pattern = data.Pattern,
-                           Enabled = true
-                       };
+            {
+                Name = data.Name,
+                Field = data.Field,
+                Mode = data.Mode,
+                Pattern = data.Pattern,
+                Enabled = true
+            };
         }
     }
 }

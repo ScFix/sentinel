@@ -1,10 +1,9 @@
 ﻿// ReSharper disable once StyleCop.SA1300
 namespace nLog1Tester
 {
+    using NLog;
     using System;
     using System.Threading;
-
-    using NLog;
 
     public static class Program
     {

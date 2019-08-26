@@ -6,15 +6,15 @@
         Width="450"
         SizeToContent="Height"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterOwner" >
+        WindowStartupLocation="CenterOwner">
 
     <Grid x:Name="LayoutRoot" Margin="0,0,0,4">
         <DockPanel Margin="5">
             <StackPanel DockPanel.Dock="Top">
                 <TextBlock Margin="5,5,0,0" FontSize="18" FontWeight="Bold">
-                    <Run Name="AssemblyNameLabel" Text="Assembly Name"/>
+                    <Run Name="AssemblyNameLabel" Text="Assembly Name" />
                 </TextBlock>
-                <TextBlock Margin="5,0,0,10" FontSize="14" TextWrapping="WrapWithOverflow">                    
+                <TextBlock Margin="5,0,0,10" FontSize="14" TextWrapping="WrapWithOverflow">
                     <Run Name="DescriptionLabel" Text="Description" />
                 </TextBlock>
                 <TextBlock Margin="5" FontSize="14" TextWrapping="WrapWithOverflow">

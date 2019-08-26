@@ -40,8 +40,8 @@
                         </Controls:FixedWidthColumn.HeaderTemplate>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding Enabled}" 
-                                          Margin="2,3,0,3"/>
+                                <CheckBox IsChecked="{Binding Enabled}"
+                                          Margin="2,3,0,3" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </Controls:FixedWidthColumn>

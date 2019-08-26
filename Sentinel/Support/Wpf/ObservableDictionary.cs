@@ -1,5 +1,6 @@
 ﻿namespace Sentinel.Support.Wpf
 {
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -8,9 +9,6 @@
     using System.ComponentModel;
     using System.Runtime.InteropServices;
     using System.Runtime.Serialization;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
 
     [Serializable]
     public class ObservableDictionary<TKey, TValue> : IDictionary<TKey, TValue>,

@@ -1,12 +1,10 @@
 ﻿namespace Sentinel.Log4Net
 {
+    using Sentinel.Interfaces.Providers;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Diagnostics;
     using System.Windows.Controls;
-
-    using Sentinel.Interfaces.Providers;
-
     using WpfExtras;
 
     /// <summary>

@@ -1,9 +1,8 @@
 namespace Sentinel.Interfaces
 {
-    using System.Runtime.Serialization;
-
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Modes for matching strings.

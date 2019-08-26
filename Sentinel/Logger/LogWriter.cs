@@ -1,10 +1,10 @@
 namespace Sentinel.Logger
 {
+    using Sentinel.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Windows;
-    using Sentinel.Interfaces;
 
     /// <summary>
     /// This service provider permits the writing of log entries to

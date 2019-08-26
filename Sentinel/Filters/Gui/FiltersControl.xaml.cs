@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Filters.Gui
 {
-    using System.Windows.Controls;
-
     using Sentinel.Filters.Interfaces;
     using Sentinel.Services;
+    using System.Windows.Controls;
 
     /// <summary>
     /// Interaction logic for FiltersControl.xaml

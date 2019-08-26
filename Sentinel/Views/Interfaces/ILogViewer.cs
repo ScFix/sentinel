@@ -1,10 +1,9 @@
 namespace Sentinel.Views.Interfaces
 {
+    using Sentinel.Interfaces;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Windows.Controls;
-
-    using Sentinel.Interfaces;
 
     public interface ILogViewer
     {

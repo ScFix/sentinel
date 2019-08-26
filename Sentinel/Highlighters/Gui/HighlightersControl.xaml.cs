@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Highlighters.Gui
 {
-    using System.Windows.Controls;
-
     using Sentinel.Highlighters.Interfaces;
     using Sentinel.Services;
+    using System.Windows.Controls;
 
     /// <summary>
     /// Interaction logic for HighlightersControl.xaml

@@ -1,17 +1,14 @@
 namespace Sentinel.Support.Converters
 {
+    using Common.Logging;
+    using NodaTime;
+    using Sentinel.Interfaces;
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
     using System.Windows.Data;
-
-    using Common.Logging;
-
-    using NodaTime;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
 
     public class DatePreferenceConverter : IValueConverter
     {

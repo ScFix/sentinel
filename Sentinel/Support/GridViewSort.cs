@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Support
 {
-    using System;
+    using Sentinel.Interfaces.CodeContracts;
     using System.ComponentModel;
     using System.Diagnostics.CodeAnalysis;
-    using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
@@ -11,9 +10,6 @@
     using System.Windows.Documents;
     using System.Windows.Input;
     using System.Windows.Media;
-
-    using Sentinel.Interfaces;
-    using Sentinel.Interfaces.CodeContracts;
 
     public static class GridViewSort
     {

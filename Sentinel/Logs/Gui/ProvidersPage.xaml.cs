@@ -1,5 +1,10 @@
 ﻿namespace Sentinel.Logs.Gui
 {
+    using Common.Logging;
+    using Sentinel.Interfaces.Providers;
+    using Sentinel.NLog;
+    using Sentinel.Providers.Interfaces;
+    using Sentinel.Services;
     using System.Collections.ObjectModel;
     using System.Collections.Specialized;
     using System.ComponentModel;
@@ -8,14 +13,6 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
-
-    using Common.Logging;
-
-    using Sentinel.Interfaces.Providers;
-    using Sentinel.NLog;
-    using Sentinel.Providers.Interfaces;
-    using Sentinel.Services;
-
     using WpfExtras;
 
     /// <summary>

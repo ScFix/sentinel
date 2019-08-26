@@ -1,9 +1,8 @@
 namespace Sentinel.Providers.Interfaces
 {
+    using Sentinel.Interfaces.Providers;
     using System;
     using System.Collections.Generic;
-
-    using Sentinel.Interfaces.Providers;
 
     public interface IProviderManager : IEnumerable<Guid>
     {

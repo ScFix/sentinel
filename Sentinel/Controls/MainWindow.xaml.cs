@@ -1,27 +1,8 @@
 ﻿namespace Sentinel.Controls
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Linq;
-    using System.Reflection;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Controls.Primitives;
-    using System.Windows.Controls.Ribbon;
-    using System.Windows.Data;
-    using System.Windows.Input;
-
     using CommandLine;
-
     using Common.Logging;
-
     using Microsoft.Win32;
-
     using Sentinel.Classification.Interfaces;
     using Sentinel.Extractors.Interfaces;
     using Sentinel.Filters.Interfaces;
@@ -38,7 +19,21 @@
     using Sentinel.Support;
     using Sentinel.Upgrader;
     using Sentinel.Views.Interfaces;
-
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Collections.Specialized;
+    using System.ComponentModel;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Linq;
+    using System.Reflection;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Controls.Primitives;
+    using System.Windows.Controls.Ribbon;
+    using System.Windows.Data;
+    using System.Windows.Input;
     using WpfExtras;
     using WpfExtras.Converters;
 
@@ -193,12 +188,12 @@
 
             // Open a save file dialog
             var savefile = new SaveFileDialog
-                               {
-                                   FileName = frame.Log.Name,
-                                   DefaultExt = ".log",
-                                   Filter = "Log documents (.log)|*.log|Text documents (.txt)|*.txt",
-                                   FilterIndex = 0
-                               };
+            {
+                FileName = frame.Log.Name,
+                DefaultExt = ".log",
+                Filter = "Log documents (.log)|*.log|Text documents (.txt)|*.txt",
+                FilterIndex = 0
+            };
 
             if (savefile.ShowDialog(this) == true)
             {
@@ -215,12 +210,12 @@
 
             // Open a save file dialog
             var savefile = new SaveFileDialog
-                               {
-                                   FileName = sessionManager.Name,
-                                   DefaultExt = ".sntl",
-                                   Filter = "Sentinel session (.sntl)|*.sntl",
-                                   FilterIndex = 0
-                               };
+            {
+                FileName = sessionManager.Name,
+                DefaultExt = ".sntl",
+                Filter = "Sentinel session (.sntl)|*.sntl",
+                FilterIndex = 0
+            };
 
             if (savefile.ShowDialog(this) == true)
             {
@@ -320,12 +315,12 @@
             {
                 // open a save file dialog
                 var openFile = new OpenFileDialog
-                                   {
-                                       FileName = sessionManager.Name,
-                                       DefaultExt = ".sntl",
-                                       Filter = "Sentinel session (.sntl)|*.sntl",
-                                       FilterIndex = 0
-                                   };
+                {
+                    FileName = sessionManager.Name,
+                    DefaultExt = ".sntl",
+                    Filter = "Sentinel session (.sntl)|*.sntl",
+                    FilterIndex = 0
+                };
 
                 if (openFile.ShowDialog(this) == true)
                 {
@@ -502,9 +497,11 @@
                 case "nlog":
                     CreateDefaultNLogListener((NLogOptions)options.Item2, sessionManager);
                     break;
+
                 case "log4net":
                     CreateDefaultLog4NetListener((Log4NetOptions)options.Item2, sessionManager);
                     break;
+
                 default:
                     sessionManager.LoadSession(commandLineArguments.FirstOrDefault());
                     break;
@@ -526,19 +523,19 @@
             Log.Debug(info);
 
             var providerSettings = new UdpAppenderSettings
-                                       {
-                                           Port = log4NetOptions.Port,
-                                           Name = info,
-                                           Info = Log4NetProvider.ProviderRegistrationInformation.Info
-                                       };
+            {
+                Port = log4NetOptions.Port,
+                Name = info,
+                Info = Log4NetProvider.ProviderRegistrationInformation.Info
+            };
 
             var providers =
                 Enumerable.Repeat(
                     new PendingProviderRecord
-                        {
-                            Info = Log4NetProvider.ProviderRegistrationInformation.Info,
-                            Settings = providerSettings
-                        },
+                    {
+                        Info = Log4NetProvider.ProviderRegistrationInformation.Info,
+                        Settings = providerSettings
+                    },
                     1);
 
             sessionManager.LoadProviders(providers);
@@ -551,15 +548,15 @@
             Log.Debug(name);
 
             var providerSettings = new NetworkSettings
-                                       {
-                                           Protocol =
+            {
+                Protocol =
                                                verbOptions.IsUdp
                                                    ? NetworkProtocol.Udp
                                                    : NetworkProtocol.Tcp,
-                                           Port = verbOptions.Port,
-                                           Name = name,
-                                           Info = info
-                                       };
+                Port = verbOptions.Port,
+                Name = name,
+                Info = info
+            };
             var providers = Enumerable.Repeat(new PendingProviderRecord { Info = info, Settings = providerSettings }, 1);
 
             sessionManager.LoadProviders(providers);
@@ -629,13 +626,13 @@
         private void OnClosed(object sender, CancelEventArgs e)
         {
             var windowInfo = new WindowPlacementInfo
-                                 {
-                                     Height = (int)Height,
-                                     Top = (int)Top,
-                                     Left = (int)Left,
-                                     Width = (int)Width,
-                                     WindowState = WindowState
-                                 };
+            {
+                Height = (int)Height,
+                Top = (int)Top,
+                Left = (int)Left,
+                Width = (int)Width,
+                WindowState = WindowState
+            };
 
             var filename = Path.ChangeExtension(persistingFilename, ".json");
             JsonHelper.SerializeToFile(windowInfo, filename);
@@ -685,9 +682,11 @@
                 case "Highlight":
                     BindSearchToSearchHighlighter();
                     break;
+
                 case "Filter":
                     BindSearchToSearchFilter();
                     break;
+
                 case "Extract":
                     BindSearchToSearchExtractor();
                     break;
@@ -707,11 +706,11 @@
         private Binding CreateBinding(string path, object source)
         {
             return new Binding
-                       {
-                           Source = source,
-                           Path = new PropertyPath(path),
-                           UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
-                       };
+            {
+                Source = source,
+                Path = new PropertyPath(path),
+                UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+            };
         }
 
         private void BindSearchToSearchFilter()
@@ -782,11 +781,11 @@
                 ItemsControl.ItemsSourceProperty,
                 new Binding { Source = standardHighlighters });
             var collapsingStandardHighlightersBinding = new Binding
-                                        {
-                                            Source = standardHighlighters,
-                                            Path = new PropertyPath("Count"),
-                                            Converter = collapseIfZero
-                                        };
+            {
+                Source = standardHighlighters,
+                Path = new PropertyPath("Count"),
+                Converter = collapseIfZero
+            };
             StandardHighlighterRibbonGroupOnTab.SetBinding(VisibilityProperty, collapsingStandardHighlightersBinding);
 
             CustomHighlighterRibbonGroupOnTab.SetBinding(
@@ -794,11 +793,11 @@
                 new Binding { Source = customHighlighters });
 
             var collapsingCustomHighlightersBinding = new Binding
-                                                          {
-                                                              Source = customHighlighters,
-                                                              Path = new PropertyPath("Count"),
-                                                              Converter = collapseIfZero
-                                                          };
+            {
+                Source = customHighlighters,
+                Path = new PropertyPath("Count"),
+                Converter = collapseIfZero
+            };
             CustomHighlighterRibbonGroupOnTab.SetBinding(VisibilityProperty, collapsingCustomHighlightersBinding);
 
             var standardFilters = new CollectionViewSource { Source = Filters.Filters };

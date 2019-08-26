@@ -83,7 +83,7 @@
 
 			<ListView Grid.RowSpan="4"
 					  ItemsSource="{Binding Images.ImageMappings}"
-					  SelectedIndex="{Binding Images.SelectedIndex}"					  
+					  SelectedIndex="{Binding Images.SelectedIndex}"
 					  SelectionMode="Single">
 			</ListView>
 

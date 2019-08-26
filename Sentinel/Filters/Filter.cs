@@ -1,12 +1,10 @@
 namespace Sentinel.Filters
 {
+    using Sentinel.Filters.Interfaces;
+    using Sentinel.Interfaces;
     using System;
     using System.Runtime.Serialization;
     using System.Text.RegularExpressions;
-
-    using Sentinel.Filters.Interfaces;
-    using Sentinel.Interfaces;
-
     using WpfExtras;
 
     [DataContract]
@@ -162,9 +160,11 @@ namespace Sentinel.Filters
                     case MatchMode.RegularExpression:
                         modeDescription = "RegEx";
                         break;
+
                     case MatchMode.CaseSensitive:
                         modeDescription = "Case sensitive";
                         break;
+
                     case MatchMode.CaseInsensitive:
                         modeDescription = "Case insensitive";
                         break;
@@ -190,27 +190,35 @@ namespace Sentinel.Filters
                 case LogEntryField.None:
                     target = string.Empty;
                     break;
+
                 case LogEntryField.Type:
                     target = logEntry.Type;
                     break;
+
                 case LogEntryField.System:
                     target = logEntry.System;
                     break;
+
                 case LogEntryField.Classification:
                     target = string.Empty;
                     break;
+
                 case LogEntryField.Thread:
                     target = logEntry.Thread;
                     break;
+
                 case LogEntryField.Source:
                     target = logEntry.Source;
                     break;
+
                 case LogEntryField.Description:
                     target = logEntry.Description;
                     break;
+
                 case LogEntryField.Host:
                     target = string.Empty;
                     break;
+
                 default:
                     target = string.Empty;
                     break;
@@ -220,22 +228,28 @@ namespace Sentinel.Filters
             {
                 case MatchMode.Exact:
                     return target.Equals(Pattern);
+
                 case MatchMode.CaseSensitive:
                     return target.Contains(Pattern);
+
                 case MatchMode.CaseInsensitive:
                     return target.ToLower().Contains(Pattern.ToLower());
+
                 case MatchMode.RegularExpression:
                     return regex != null && regex.IsMatch(target);
+
                 default:
                     return false;
             }
         }
 
 #if DEBUG
+
         public override string ToString()
         {
             return Description;
         }
+
 #endif
     }
 }

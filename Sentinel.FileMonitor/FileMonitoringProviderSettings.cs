@@ -1,8 +1,7 @@
 ﻿namespace Sentinel.FileMonitor
 {
-    using System.Globalization;
-
     using Sentinel.Interfaces.Providers;
+    using System.Globalization;
 
     public class FileMonitoringProviderSettings : IFileMonitoringProviderSettings
     {

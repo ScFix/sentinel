@@ -1,5 +1,10 @@
 ﻿namespace Sentinel.Views.Gui
 {
+    using Extractors.Interfaces;
+    using Filters.Interfaces;
+    using Interfaces;
+    using Sentinel.Interfaces;
+    using Services;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -8,17 +13,6 @@
     using System.Linq;
     using System.Windows.Controls;
     using System.Windows.Threading;
-
-    using Extractors.Interfaces;
-
-    using Filters.Interfaces;
-
-    using Interfaces;
-
-    using Sentinel.Interfaces;
-
-    using Services;
-
     using WpfExtras;
 
     public class LogMessages : ViewModelBase, ILogViewer
@@ -218,22 +212,24 @@
                 "Automatically scroll to show the newest entry",
                 true,
                 new DelegateCommand(e => autoscroll = !autoscroll))
-                                       {
-                                           IsChecked = autoscroll,
-                                           ImageIdentifier = "ScrollDown"
-                                       };
+            {
+                IsChecked = autoscroll,
+                ImageIdentifier = "ScrollDown"
+            };
 
             var clearButton = new LogViewerToolbarButton(
                 "Clear",
                 "Clear the log messages from the display",
                 false,
-                new DelegateCommand(e => clearPending = true)) { ImageIdentifier = "Clear" };
+                new DelegateCommand(e => clearPending = true))
+            { ImageIdentifier = "Clear" };
 
             var pauseButton = new LogViewerToolbarButton(
                 "Pause",
                 "Pause the addition of messages to the display",
                 true,
-                new DelegateCommand(PauseMessagesHandler)) { IsChecked = false, ImageIdentifier = "Pause" };
+                new DelegateCommand(PauseMessagesHandler))
+            { IsChecked = false, ImageIdentifier = "Pause" };
 
             var toolbar = new ObservableCollection<ILogViewerToolbarButton>
                               {

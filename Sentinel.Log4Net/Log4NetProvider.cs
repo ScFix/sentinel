@@ -1,5 +1,9 @@
 ﻿namespace Sentinel.Log4Net
 {
+    using Common.Logging;
+    using Interfaces;
+    using Interfaces.Providers;
+    using Sentinel.Interfaces.CodeContracts;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -10,13 +14,6 @@
     using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Linq;
-
-    using Common.Logging;
-
-    using Interfaces;
-    using Interfaces.Providers;
-
-    using Sentinel.Interfaces.CodeContracts;
 
     public class Log4NetProvider : INetworkProvider
     {
@@ -213,10 +210,9 @@
 
         private ILogEntry DeserializeMessage(string message)
         {
-
             try
             {
-                // Record the current date/time 
+                // Record the current date/time
                 var receivedTime = DateTime.UtcNow;
 
                 var payload = $@"<entry xmlns:log4net=""{log4Net}"">{message}</entry>";
@@ -245,6 +241,7 @@
                                 case "log4net:HostName":
                                     host = value;
                                     break;
+
                                 default:
                                     if (props.ContainsKey(name))
                                         props[name] = value;
@@ -270,7 +267,8 @@
                         line = source.Attribute("line").Value;
                     }
 
-                    var metaData = new Dictionary<string, object> {
+                    var metaData = new Dictionary<string, object>
+                    {
                         ["Classification"] = classification,
                         ["Host"] = host
                     };
@@ -292,14 +290,14 @@
                     var sourceTime = entryEvent.GetAttributeDateTime("timestamp", DateTime.Now);
 
                     var logEntry = new LogEntry
-                                       {
-                                           DateTime = sourceTime,
-                                           System = system,
-                                           Thread = entryEvent.GetAttribute("thread", string.Empty),
-                                           Description = description,
-                                           Type = type,
-                                           MetaData = metaData
-                                       };
+                    {
+                        DateTime = sourceTime,
+                        System = system,
+                        Thread = entryEvent.GetAttribute("thread", string.Empty),
+                        Description = description,
+                        Type = type,
+                        MetaData = metaData
+                    };
 
                     if (logEntry.Description.ToUpper().Contains("EXCEPTION"))
                     {

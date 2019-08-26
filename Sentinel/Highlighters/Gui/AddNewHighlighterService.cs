@@ -1,10 +1,9 @@
 ﻿namespace Sentinel.Highlighters.Gui
 {
-    using System.Windows;
-    using System.Windows.Media;
-
     using Sentinel.Highlighters.Interfaces;
     using Sentinel.Services;
+    using System.Windows;
+    using System.Windows.Media;
 
     public class AddNewHighlighterService : IAddHighlighterService
     {
@@ -34,13 +33,13 @@
             Color? foreground = null;
 
             var highlighter = new Highlighter
-                                  {
-                                      Name = data.Name,
-                                      Field = data.Field,
-                                      Pattern = data.Pattern,
-                                      Mode = data.Mode,
-                                      Enabled = true
-                                  };
+            {
+                Name = data.Name,
+                Field = data.Field,
+                Pattern = data.Pattern,
+                Mode = data.Mode,
+                Enabled = true
+            };
 
             if (data.OverrideBackgroundColour)
             {

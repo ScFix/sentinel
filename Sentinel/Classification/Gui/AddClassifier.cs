@@ -1,9 +1,8 @@
 ﻿namespace Sentinel.Classification.Gui
 {
-    using System.Windows;
-
     using Interfaces;
     using Services;
+    using System.Windows;
 
     public class AddClassifier : IAddClassifyingService
     {
@@ -31,14 +30,14 @@
         private static Classifier Construct(AddEditClassifier data)
         {
             return new Classifier
-                       {
-                           Name = data.Name,
-                           Type = data.Type,
-                           Field = data.Field,
-                           Mode = data.Mode,
-                           Pattern = data.Pattern,
-                           Enabled = true
-                       };
+            {
+                Name = data.Name,
+                Type = data.Type,
+                Field = data.Field,
+                Mode = data.Mode,
+                Pattern = data.Pattern,
+                Enabled = true
+            };
         }
     }
 }
