@@ -2,6 +2,8 @@
 
 namespace Sentinel.Upgrader
 {
+    using Sentinel.Services;
+    using Squirrel;
     using System;
     using System.ComponentModel;
     using System.Diagnostics;
@@ -13,10 +15,6 @@ namespace Sentinel.Upgrader
     using System.Threading.Tasks;
     using System.Windows.Input;
     using System.Windows.Threading;
-
-    using Sentinel.Services;
-
-    using Squirrel;
     using WpfExtras;
 
     public class SquirrelUpgradeService : IUpgradeService, INotifyPropertyChanged
@@ -60,6 +58,7 @@ namespace Sentinel.Upgrader
                         case nameof(IsFirstRun):
                             DispatcherUiThread?.Invoke(CommandManager.InvalidateRequerySuggested);
                             break;
+
                         case nameof(DispatcherUiThread):
                             if (!preferences?.IsDisabled ?? false)
                             {
@@ -69,6 +68,7 @@ namespace Sentinel.Upgrader
                             }
 
                             break;
+
                         case nameof(Error):
                             if (showErrors && !string.IsNullOrWhiteSpace(Error))
                             {
